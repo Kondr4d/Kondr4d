@@ -12,17 +12,15 @@ org 100h
     
     .NAME:
         MOV ES: [DI-2], 00000000B       ; CLEAR PREVIOUS CHARACTER
-        MOV DL, 'S'
+        MOV DL, 'M'
         MOV DH, 00001011B               ; FOREGROUND - BLUE, BACKGROUND - BLACK    
         MOV ES: [DI], DX    
-        MOV DL, 'K'    
+        MOV DL, 'C'    
         MOV ES: [DI+2], DX              ; INCREMENT BY 2, SINCE THE FIRST CHAR TAKES 2 BYTES     
         MOV DL, 'T'
         MOV ES: [DI+4], DX    
-        MOV DL, 'G'
+        MOV DL, 'V'
         MOV ES: [DI+6], DX
-        MOV DL, 'A'
-        MOV ES: [DI+8], DX
         ADD DI, 2                       ; MOVE BY 2 BYTES 
     LOOP .NAME
 ret
